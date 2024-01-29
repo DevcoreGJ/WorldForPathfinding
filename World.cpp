@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 const int rows = 5;
 const int cols = 5;
@@ -15,6 +17,9 @@ void printCosts(const std::vector<std::vector<int>>& costs) {
 }
 
 int main() {
+    // Seed for random number generation
+    std::srand(std::time(0));
+
     // Define the grid with costs of traversal
     std::vector<std::vector<int>> costs = {
         {2, 3, 1, 4, 2},
@@ -24,9 +29,23 @@ int main() {
         {3, 2, 3, 2, 2}
     };
 
+    // Randomly select start and end nodes
+    int startRow = std::rand() % rows;
+    int startCol = std::rand() % cols;
+    int endRow, endCol;
+
+    do {
+        endRow = std::rand() % rows;
+        endCol = std::rand() % cols;
+    } while (startRow == endRow && startCol == endCol);
+
     // Print the grid with costs of traversal
     std::cout << "Costs of traversal:\n";
     printCosts(costs);
+
+    // Print the randomly selected start and end nodes
+    std::cout << "Start Node: (" << startRow << "," << startCol << ")\n";
+    std::cout << "End Node:   (" << endRow << "," << endCol << ")\n";
 
     return 0;
 }
