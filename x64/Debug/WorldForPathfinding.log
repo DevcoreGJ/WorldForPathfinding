@@ -1,3 +1,4 @@
 ﻿  World.cpp
-C:\Users\Quies\Documents\Terminal Hacker\WorldForPathfinding\World.cpp(21,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Quies\Documents\Terminal Hacker\WorldForPathfinding\World.cpp(9,28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Quies\Documents\Terminal Hacker\WorldForPathfinding\World.cpp(33,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   WorldForPathfinding.vcxproj -> C:\Users\Quies\Documents\Terminal Hacker\WorldForPathfinding\x64\Debug\WorldForPathfinding.exe
